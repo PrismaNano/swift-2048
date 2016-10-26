@@ -8,20 +8,16 @@ Like the original Objective-C version, swift-2048 does not rely upon SpriteKit. 
 Instructions
 ------------
 
-You will need the Xcode 6 Developer Preview to build and run the project. However, it should run under either iOS 7 or iOS 8 (on the simulator).
+You will need the Xcode 8 to build and run the project. This project also targets iOS 10.
 
 Tap the button to play the game. Swipe to move the tiles.
 
 Thoughts on Swift
 -----------------
 
-Swift is great. Pattern matching, tuples, and typeclasses are amazing. Programming in Swift feels much closer to programming in Scala than in Objective-C. Types are important again.
+Swift is a well-designed language that will, hopefully, drag mainstream programming halfway to ML (kicking and screaming the entire way, of course).
 
-It's a little disappointing that Apple hasn't provided closure-based callbacks for UIKit controls. Selectors seem pretty hacky in Swift, but they do work.
-
-Still have no idea how to make things private, public, or protected. In Objective-C you could hide internal details away in the .m file. In Swift, everything is exposed by default. Apparently this is something that will be added into the language before release; there will also be a flag to disable it (useful for exposing methods for unit testing).
-
-Xcode is as unstable as always. The background compiler/code analyzer kept on crashing and restarting itself. Xcode was functional enough to allow the project to be brought to some state of completion. The debugger is horribly broken though. (Note that Xcode 6 DP is obviously beta software.)
+If you really want to see my out-of-date thoughts on Swift, check out the git history for README.md.
 
 ### Features Swift has that Objective-C lacks
 (Not comprehensive)
@@ -62,8 +58,6 @@ Xcode is as unstable as always. The background compiler/code analyzer kept on cr
 - Adding or modifying methods and classes at runtime
 - Invocations
 - Message proxying
-- Selectors
-
 
 ### Features I wish Swift had
 
