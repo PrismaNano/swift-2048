@@ -164,11 +164,10 @@ class NumberTileGameViewController : UIViewController, GameModelProtocol {
     let (userWon, _) = m.userHasWon()
     if userWon {
       // TODO: alert delegate we won
-      let alertView = UIAlertView()
-      alertView.title = "Victory"
-      alertView.message = "You won!"
-      alertView.addButton(withTitle: "Cancel")
-      alertView.show()
+      let alert = UIAlertController(title: "Victory", message: "You won!", preferredStyle: UIAlertControllerStyle.alert)
+      let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+      alert.addAction(cancelAction)
+      present(alert, animated: true, completion: nil)
       // TODO: At this point we should stall the game until the user taps 'New Game' (which hasn't been implemented yet)
       return
     }
@@ -181,11 +180,10 @@ class NumberTileGameViewController : UIViewController, GameModelProtocol {
     if m.userHasLost() {
       // TODO: alert delegate we lost
       NSLog("You lost...")
-      let alertView = UIAlertView()
-      alertView.title = "Defeat"
-      alertView.message = "You lost..."
-      alertView.addButton(withTitle: "Cancel")
-      alertView.show()
+      let alert = UIAlertController(title: "Defeat", message: "You lost...", preferredStyle: UIAlertControllerStyle.alert)
+      let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+      alert.addAction(cancelAction)
+      present(alert, animated: true, completion: nil)
     }
   }
 
